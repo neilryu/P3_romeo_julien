@@ -8,9 +8,9 @@
     <title>Accueil</title>
 </head>
 <body>
-    <head>
+    <header>
         <img src="images/logo/ohmyfood.png">
         <h1>ça marche pas</h1>
-    </head>
+    </header>
 </body>
 </html>
