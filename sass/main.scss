@@ -5,6 +5,8 @@ $Tertiaire: #99E2D0;
 $Back: #FFF;
 body, button{
     font-family: 'Roboto', sans-serif;
+}
+body{
     position: relative;
 }
 a{
@@ -14,6 +16,7 @@ header{
     display: flex;
     flex-flow: row;
     justify-content: center;
+    margin: 0% 0% 55% 0%;
     .logo{
         width: 50%;
     }
@@ -23,9 +26,15 @@ header{
         top: 5px;
         font-size: 21px;
     }
+    .fa-arrow-left{
+        color: #000;
+    }
 }
 .entête{
     width: 100%;
+    position: absolute;
+    top: 3%;
+    z-index: -1;
 }
 .carte{
     background: #dfdfdf;
@@ -35,14 +44,34 @@ header{
 h1{
     font-family: 'Shrikhand', cursive;
 }
+.titre::after{
+    content: '';
+    background: $Tertiaire;
+    display: block;
+    height: 4px;
+    width: 40px;
+}
 .enseigne{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     button{
         border: none;
         background: none;
         font-size: 30px;
+        position: absolute;
+        top: 23%; right: 13%;
+        i{
+            position: absolute;
+        }
+        .fas{
+            opacity: 0;
+        }
+        &:active{
+            .far {
+                transform: opacity(0);
+            }
+            .fas{
+                transform: opacity(1);
+            }
+        }
     }
 }
 .case{
@@ -72,15 +101,41 @@ h1{
         font-size: 14px;
     }
 }
+.commander {
+    border: none;
+    display: block;
+    margin: auto;
+    padding: 0% 12%;
+    border-radius: 12% / 50%;
+    background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
+    p{
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        margin: 14% 0%;
+    }
+}
 footer{
-    background: #000;
+    background: #000000d1;
     color:#FFF;
     display: flex;
     flex-flow: column;
+    padding: 4%;
     .myfood{
         font-family: 'Shrikhand', cursive;
+        margin: 0% 0% 3% 0%;
     }
     a{
         color:#FFF;
+        margin: 1% 0%;
+    }
+    i{
+        margin: 0% 2% 0% 0%;
+    }
+    .fa-utensils{
+        margin: 0% 4% 0% 0%;
+    }
+    .fa-handshake{
+        transform: rotate(321deg);
     }
 }
