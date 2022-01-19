@@ -60,16 +60,17 @@ h1{
         top: 23%; right: 13%;
         i{
             position: absolute;
+            transition: 1s ease-in-out;
         }
         .fas{
             opacity: 0;
         }
-        &:active{
+        &:active, &:visited{
             .far {
-                transform: opacity(0);
+                opacity:0;
             }
             .fas{
-                transform: opacity(1);
+                opacity:1;
             }
         }
     }

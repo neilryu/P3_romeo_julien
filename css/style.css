@@ -66,15 +66,16 @@ h1 {
 }
 .enseigne button i {
   position: absolute;
+  transition: 1s ease-in-out;
 }
 .enseigne button .fas {
   opacity: 0;
 }
-.enseigne button:active .far {
-  transform: opacity(0);
+.enseigne button:active .far, .enseigne button:visited .far {
+  opacity: 0;
 }
-.enseigne button:active .fas {
-  transform: opacity(1);
+.enseigne button:active .fas, .enseigne button:visited .fas {
+  opacity: 1;
 }
 
 .case {
