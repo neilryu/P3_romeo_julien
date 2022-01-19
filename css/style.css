@@ -83,6 +83,7 @@ h1 {
 }
 
 .case {
+  display: flex;
   background: #FFF;
   position: relative;
   margin: 2% 0%;
@@ -105,10 +106,8 @@ h1 {
   font-weight: 400;
 }
 .case .prix {
-  display: flex;
-  position: absolute;
-  right: 5%;
-  bottom: 15%;
+  margin-left: auto;
+  margin-top: auto;
   font-weight: 600;
   font-size: 14px;
 }
