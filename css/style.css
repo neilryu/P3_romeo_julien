@@ -66,15 +66,19 @@ h1 {
 }
 .enseigne button i {
   position: absolute;
-  transition: 1s ease-in-out;
+  transition: 500ms ease-in-out;
 }
 .enseigne button .fas {
   opacity: 0;
+  color: transparent;
+  background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-.enseigne button:active .far, .enseigne button:visited .far {
+.enseigne button:active .far {
   opacity: 0;
 }
-.enseigne button:active .fas, .enseigne button:visited .fas {
+.enseigne button:active .fas {
   opacity: 1;
 }
 
@@ -85,6 +89,9 @@ h1 {
   padding: 2%;
   border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .case p {
   margin: 1% 0%;
@@ -105,7 +112,10 @@ h1 {
   font-weight: 600;
   font-size: 14px;
 }
-
+.case .valid {
+  display: flex;
+  position: relative;
+}
 .commander {
   border: none;
   display: block;
