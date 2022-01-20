@@ -93,6 +93,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  height: 36px;
 }
 .case p {
   margin: 1% 0%;
@@ -112,9 +113,22 @@ h1 {
   font-size: 14px;
 }
 .case .valid {
-  display: flex;
+  display: none;
   position: relative;
+  font-size: 13px;
+  top: -21px;
+  background: aqua;
+  color: #FFF;
+  margin: 0% 0% 0% 5%;
+  padding-inline: 3%;
+  padding-block: 8%;
+  /* faire une key frame je pense */
 }
+.case:active .valid {
+  display: flex;
+  transform: scale(1.5);
+}
+
 .commander {
   border: none;
   display: block;
