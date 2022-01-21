@@ -42,6 +42,7 @@ header .fa-arrow-left {
   background: #dfdfdf;
   border-radius: 8% 8% 0% 0%/3% 3% 0% 0%;
   padding: 3%;
+  overflow: hidden;
 }
 
 h1 {
@@ -82,6 +83,15 @@ h1 {
   opacity: 1;
 }
 
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .case {
   display: flex;
   background: #FFF;
@@ -94,6 +104,7 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 36px;
+  animation: show 1000ms ease-in-out both;
 }
 .case p {
   margin: 1% 0%;
@@ -113,20 +124,38 @@ h1 {
   font-size: 14px;
 }
 .case .valid {
-  display: none;
+  visibility: hidden;
   position: relative;
   font-size: 13px;
-  top: -21px;
-  background: aqua;
-  color: #FFF;
-  margin: 0% 0% 0% 5%;
-  padding-inline: 3%;
+  bottom: 15px;
+  left: 8px;
+  background: #99E2D0;
   padding-block: 8%;
-  /* faire une key frame je pense */
+  transition: all 200ms;
+}
+.case .fas {
+  color: #FFF;
+  position: absolute;
+  left: 8px;
+  top: 27px;
+  transform: rotate(95deg);
+}
+.case.n2 {
+  animation-delay: 500ms;
+}
+.case.n3 {
+  animation-delay: 1000ms;
 }
 .case:active .valid {
-  display: flex;
+  visibility: visible;
+  padding-inline: 4%;
+  margin: 0% 0% 0% 5%;
+  transform-origin: right;
   transform: scale(1.5);
+}
+.case:active .fas {
+  transition: 500ms;
+  transform: rotate(0deg);
 }
 
 .commander {
@@ -142,6 +171,9 @@ h1 {
   font-weight: 500;
   color: #fff;
   margin: 14% 0%;
+}
+.commander:hover {
+  background: linear-gradient(174deg, #fface8, #ae80e5 100%);
 }
 
 footer {
