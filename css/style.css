@@ -57,7 +57,10 @@ h1 {
   width: 40px;
 }
 
-.enseigne button {
+.enseigne p, .favori p {
+  color: #000;
+}
+.enseigne button, .favori button {
   border: none;
   background: none;
   font-size: 30px;
@@ -65,21 +68,21 @@ h1 {
   top: 23%;
   right: 13%;
 }
-.enseigne button i {
+.enseigne button i, .favori button i {
   position: absolute;
   transition: 500ms ease-in-out;
 }
-.enseigne button .fas {
+.enseigne button .fas, .favori button .fas {
   opacity: 0;
   color: transparent;
   background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.enseigne button:active .far {
+.enseigne button:active .far, .favori button:active .far {
   opacity: 0;
 }
-.enseigne button:active .fas {
+.enseigne button:active .fas, .favori button:active .fas {
   opacity: 1;
 }
 
@@ -96,39 +99,39 @@ h1 {
   display: flex;
   background: #FFF;
   position: relative;
-  margin: 2% 0%;
-  padding: 2%;
+  margin: 3% 0%;
+  padding: 3%;
   border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: 36px;
+  height: 40px;
   animation: show 1000ms ease-in-out both;
 }
 .case p {
   margin: 1% 0%;
 }
 .case .intituler {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
 }
 .case .ingrédiant {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
 }
 .case .prix {
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 7%;
+  margin-right: 3%;
   font-weight: 600;
-  font-size: 14px;
 }
 .case .valid {
   visibility: hidden;
   position: relative;
   font-size: 13px;
   bottom: 15px;
-  left: 8px;
+  left: 12px;
   background: #99E2D0;
   padding-block: 8%;
   transition: all 200ms;
@@ -136,7 +139,7 @@ h1 {
 .case .fas {
   color: #FFF;
   position: absolute;
-  left: 8px;
+  left: 11px;
   top: 27px;
   transform: rotate(95deg);
 }
@@ -146,12 +149,15 @@ h1 {
 .case.n3 {
   animation-delay: 1000ms;
 }
+.case.n4 {
+  animation-delay: 1500ms;
+}
 .case:active .valid {
   visibility: visible;
-  padding-inline: 4%;
+  padding-inline: 17px;
   margin: 0% 0% 0% 5%;
   transform-origin: right;
-  transform: scale(1.5);
+  transform: scale(1.6);
 }
 .case:active .fas {
   transition: 500ms;
@@ -161,7 +167,7 @@ h1 {
 .commander {
   border: none;
   display: block;
-  margin: auto;
+  margin: 13% auto;
   padding: 0% 12%;
   border-radius: 12%/50%;
   background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
@@ -174,6 +180,80 @@ h1 {
 }
 .commander:hover {
   background: linear-gradient(174deg, #fface8, #ae80e5 100%);
+}
+
+/* accueil uniquement*/
+#page_d_accueil {
+  margin: auto;
+}
+
+.carte_interactive {
+  margin: 0% auto;
+  background: #dfdfdf;
+  padding: 0% 0% 1% 0%;
+  text-align: center;
+}
+.carte_interactive .localisation {
+  background: #cfcfcf;
+  padding: 3%;
+  margin: 0%;
+  font-size: 15px;
+}
+.carte_interactive .Réservez {
+  font-weight: 600;
+  font-size: 30px;
+  margin: 5% 14% 2%;
+}
+.carte_interactive p {
+  margin: 0% 2%;
+  font-size: 20px;
+}
+.carte_interactive .commander {
+  padding: 4% 7%;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.restaurants {
+  background: #dfdfdf;
+}
+
+.restaurants, .fonctionnement {
+  padding: 3%;
+}
+.restaurants h1, .fonctionnement h1 {
+  font-family: "Roboto", sans-serif;
+}
+.restaurants h1, .restaurants h2, .fonctionnement h1, .fonctionnement h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.favori {
+  position: relative;
+  background: #FFF;
+  padding: 0% 0% 2% 0%;
+  margin: 0% 0% 4% 0%;
+  border-radius: 4% 4% 4% 4%/6% 6% 6% 6%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.favori .accueil {
+  top: 83%;
+}
+.favori img {
+  width: 385px;
+  height: 200px;
+  border-radius: 4% 4% 0% 0%/6% 6% 0% 0%;
+}
+.favori .noms {
+  font-weight: 900;
+}
+.favori .lieu {
+  font-size: 12px;
+}
+.favori .noms, .favori .lieu {
+  font-size: 14px;
+  margin: 1% 0% 2% 2%;
 }
 
 footer {
