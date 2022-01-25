@@ -57,10 +57,10 @@ h1 {
   width: 40px;
 }
 
-.enseigne p, .favori p {
+.enseigne p, .menu p {
   color: #000;
 }
-.enseigne button, .favori button {
+.enseigne button, .menu button {
   border: none;
   background: none;
   font-size: 30px;
@@ -68,21 +68,21 @@ h1 {
   top: 23%;
   right: 13%;
 }
-.enseigne button i, .favori button i {
+.enseigne button i, .menu button i {
   position: absolute;
   transition: 500ms ease-in-out;
 }
-.enseigne button .fas, .favori button .fas {
+.enseigne button .fas, .menu button .fas {
   opacity: 0;
   color: transparent;
   background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
-.enseigne button:active .far, .favori button:active .far {
+.enseigne button:active .far, .menu button:active .far {
   opacity: 0;
 }
-.enseigne button:active .fas, .favori button:active .fas {
+.enseigne button:active .fas, .menu button:active .fas {
   opacity: 1;
 }
 
@@ -214,8 +214,58 @@ h1 {
   color: #FFF;
 }
 
+.fonctionnement ul {
+  list-style: none;
+  counter-reset: listCounter;
+  padding: 0%;
+}
+.fonctionnement ul li {
+  position: relative;
+  color: #000;
+  counter-increment: listCounter;
+  background: #dbdbdb;
+  border-radius: 4% 4% 4% 4%/20% 20% 20% 20%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 5% 0%;
+  padding: 5%;
+  text-align: center;
+  font-weight: 600;
+  animation-name: show;
+  animation-duration: 1000ms;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+.fonctionnement ul li.n2 {
+  animation-delay: 1000ms;
+}
+.fonctionnement ul li.n3 {
+  animation-delay: 2000ms;
+}
+.fonctionnement ul li ::before {
+  position: absolute;
+  bottom: 33%;
+  left: 9%;
+}
+.fonctionnement ul li ::after {
+  content: counter(listCounter);
+  background: #9356DC;
+  border-radius: 50%/50%;
+  width: 7%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  display: flex;
+  position: absolute;
+  right: 97%;
+  bottom: 29%;
+  font-size: 65%;
+}
+
 .restaurants {
-  background: #dfdfdf;
+  background: #dbdbdb;
 }
 
 .restaurants, .fonctionnement {
@@ -229,31 +279,33 @@ h1 {
   font-size: 24px;
 }
 
-.favori {
+.menu {
   position: relative;
+}
+.menu .favori {
   background: #FFF;
   padding: 0% 0% 2% 0%;
   margin: 0% 0% 4% 0%;
   border-radius: 4% 4% 4% 4%/6% 6% 6% 6%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.favori .accueil {
-  top: 83%;
-}
-.favori img {
-  width: 385px;
+.menu .favori img {
+  width: 100%;
   height: 200px;
   border-radius: 4% 4% 0% 0%/6% 6% 0% 0%;
 }
-.favori .noms {
+.menu .favori .noms {
   font-weight: 900;
 }
-.favori .lieu {
+.menu .favori .lieu {
   font-size: 12px;
 }
-.favori .noms, .favori .lieu {
+.menu .favori .noms, .menu .favori .lieu {
   font-size: 14px;
   margin: 1% 0% 2% 2%;
+}
+.menu .accueil {
+  top: 83%;
 }
 
 footer {
