@@ -40,6 +40,7 @@ header{
     background: #dfdfdf;
     border-radius:8% 8% 0% 0%/3% 3% 0% 0%;
     padding: 3%;
+    overflow: hidden;
 }
 h1{
     font-family: 'Shrikhand', cursive;
@@ -51,7 +52,10 @@ h1{
     height: 4px;
     width: 40px;
 }
-.enseigne{
+.enseigne,.menu{
+    p{
+       color: #000; 
+    }
     button{
         border: none;
         background: none;
@@ -65,7 +69,7 @@ h1{
         .fas{
             opacity: 0;
             color: transparent;
-            background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
+            background: linear-gradient(174deg, $Secondaire, $Primaire 100%);
             background-clip: text;
             -webkit-background-clip: text;
         }
@@ -79,55 +83,283 @@ h1{
         }
     }
 }
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .case{
+    display: flex;
     background: $Back;
     position: relative;
-    margin: 2% 0%;
-    padding: 2%;
+    margin: 3% 0%;
     border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 47px;
     overflow:hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
+    animation: show 1000ms ease-in-out both;
+    box-sizing: border-box;
+    .choix{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: calc(100% - 50px);
+    }
     p{
         margin: 1% 0%;
     }
     .intituler{
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 600;
     }
     .ingrédiant{
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 400;
     }
     .prix{
-        display: flex;
-        position: absolute;
-        right: 5%;
-        bottom: 15%;
         font-weight: 600;
-        font-size: 14px;
+        padding: 0% 4%;
+        display: flex;
+        align-items: flex-end;
     }
     .valid{
-        display: flex;
+        visibility: hidden;
         position: relative;
+        font-size: 13px;
+        bottom: 15px;
+        left: 12px;
+        background: $Tertiaire;
+        padding-block: 8%;
+        transition: all 200ms;
+    }
+    .fas{
+        color: #FFF;
+        position: absolute;
+        left: 21%;
+        top: 51%;
+        transform: rotate(95deg);
+    }
+    &.n2{
+        animation-delay: 500ms;
+    }
+    &.n3{
+        animation-delay: 1000ms;
+    }
+    &.n4{
+        animation-delay: 1500ms;
     }
     &:active{
-
+        .valid{
+            visibility: visible;
+            padding-inline: 17px;
+            margin: 0% 0% 0% 5%;
+            transform-origin: right;
+            transform: scale(1.7);
+        }
+        .fas{
+            transition: 500ms;
+            transform: rotate(0deg);
+        }
     }
 }
 .commander {
     border: none;
     display: block;
-    margin: auto;
+    margin: 13% auto;
     padding: 0% 12%;
     border-radius: 12% / 50%;
-    background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
+    background: linear-gradient(174deg, $Secondaire, $Primaire 100%);
     p{
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 20px;
+        font-weight: 900;
         color: #fff;
         margin: 14% 0%;
+    }
+    &:hover{
+        background: linear-gradient(174deg,lighten($Secondaire,10%), lighten($Primaire,10%) 100%);
+    }
+}
+/* accueil uniquement*/
+@keyframes disparait {
+    0%{
+        z-index: 1;
+        opacity: 1;
+    }
+    100% {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+@keyframes charge {
+    0%{ 
+        transform:rotate(0deg)
+    }
+    100%{ 
+        transform: rotate(360deg);
+    }
+}
+.changement{
+    background: #dbdbdb;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: disparait 800ms ease-in-out 3s both;
+    p{
+        color: $Secondaire;
+        position: absolute;
+        font-size: 60px;
+        top: 2%;
+        left: 20%;
+    }
+    span{
+        width: 172px;
+        height: 172px;
+        display: flex;
+        position: relative;
+        top: 7%;
+        left: 25%;
+        color: transparent;
+    }
+    span::before{
+        border-radius: 50px;
+        border: 6px solid #a1a1a1;
+    }
+    span::after{
+        content: "";
+        position: absolute;
+        top: 19%;
+        left: 19%;
+        bottom: 19%;
+        right: 19%;
+        border-radius: 50%;
+        border: 6px solid $Primaire;
+        border-top-color: $Tertiaire;
+        animation: charge 1s linear infinite;
+    }
+}
+#page_d_accueil{
+    margin: auto;
+}
+.carte_interactive{
+    margin: 0% auto;
+    background: #dfdfdf;
+    padding: 0% 0% 1% 0%;
+    text-align: center;
+    .localisation{
+        background: #cfcfcf;
+        padding: 3%;
+        margin: 0%;
+        font-size: 15px;
+    }
+    .Réservez{
+        font-weight: 600;
+        font-size: 30px;
+        margin: 5% 14% 2%;
+    }
+    p{
+        margin:  0% 2%;
+        font-size: 20px;
+    }
+    .commander{
+        padding: 4% 7%;
+        font-size: 18px;
+        color: #FFF;
+    }
+}
+.fonctionnement{
+    ul{
+        list-style:none;
+        counter-reset: listCounter;
+        padding: 0%;
+        li{
+            position: relative;
+            color: #000;
+            counter-increment: listCounter;
+            background: #dbdbdb;
+            border-radius: 4% 4% 4% 4%/20% 20% 20% 20%;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+            margin: 5% 0%;
+            padding: 5%;
+            text-align: center;
+            font-weight: 600;
+            animation-name: show;
+            animation-duration: 1000ms;
+            animation-delay: 4s;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            &.n2{
+                animation-delay: 5000ms;
+            } 
+            &.n3{
+                animation-delay: 6000ms;
+            }
+            ::before{
+                position: absolute;
+                bottom: 33%;
+                left: 9%;
+            }
+            ::after{
+                content: counter(listCounter);
+                background:$Primaire;
+                border-radius: 50%/50%;
+                width: 7%;
+                height: 40%;
+                justify-content: center;
+                align-items: center;
+                color: #FFF;
+                display: flex;
+                position: absolute;
+                right: 97%;
+                bottom: 29%;
+                font-size: 65%;
+            }
+        }
+    }
+}
+.restaurants{
+    background: #dbdbdb;
+}
+.restaurants,.fonctionnement{
+    padding: 3%;
+    h1{
+        font-family: 'Roboto', sans-serif;
+    }
+    h1,h2{
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+.menu{
+    position: relative;
+    .favori{
+        background: #FFF;
+        padding: 0% 0% 2% 0%;
+        margin: 0% 0% 4% 0%;
+        border-radius: 4% 4% 4% 4%/6% 6% 6% 6%;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+        img{
+            width: 100%;
+            height: 200px;
+            border-radius: 4% 4% 0% 0%/6% 6% 0% 0%;
+        }
+        .noms{
+            font-weight: 900;
+        }
+        .lieu{
+            font-size: 12px;
+        }
+        .noms,.lieu{
+            font-size: 14px;
+            margin: 1% 0% 2% 2%;
+        }
+    }
+    .accueil{
+        top:83%
     }
 }
 footer{
