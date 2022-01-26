@@ -100,14 +100,18 @@ h1 {
   background: #FFF;
   position: relative;
   margin: 3% 0%;
-  padding: 3%;
   border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 47px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 40px;
   animation: show 1000ms ease-in-out both;
+  box-sizing: border-box;
+}
+.case .choix {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: calc(100% - 50px);
 }
 .case p {
   margin: 1% 0%;
@@ -121,10 +125,10 @@ h1 {
   font-weight: 400;
 }
 .case .prix {
-  margin-left: auto;
-  margin-top: 7%;
-  margin-right: 3%;
   font-weight: 600;
+  padding: 0% 4%;
+  display: flex;
+  align-items: flex-end;
 }
 .case .valid {
   visibility: hidden;
@@ -139,8 +143,8 @@ h1 {
 .case .fas {
   color: #FFF;
   position: absolute;
-  left: 11px;
-  top: 27px;
+  left: 21%;
+  top: 51%;
   transform: rotate(95deg);
 }
 .case.n2 {
@@ -157,7 +161,7 @@ h1 {
   padding-inline: 17px;
   margin: 0% 0% 0% 5%;
   transform-origin: right;
-  transform: scale(1.6);
+  transform: scale(1.7);
 }
 .case:active .fas {
   transition: 500ms;
