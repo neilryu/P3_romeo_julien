@@ -221,6 +221,18 @@ h1{
         background: #dbdbdb;
     }
 }
+@keyframes icone {
+    0%{
+        color: #000;
+    
+    }
+    50%{
+        color: $Primaire;
+    }
+    100%{
+        color: #000;
+    }
+}
 .fonctionnement{
     ul{
         list-style:none;
@@ -243,11 +255,20 @@ h1{
             animation-fill-mode: both;
             animation-iteration-count: 1,infinite;
             animation-timing-function: ease-in-out;
+            i{
+                animation:icone 4s both 3s infinite ease-in-out;
+            }
             &.n2{
                 animation-delay: 1000ms;
+                i{
+                    animation-delay: 1000ms;
+                }
             } 
             &.n3{
                 animation-delay: 2000ms;
+                i{
+                    animation-delay: 2000ms;
+                }
             }
             ::before{
                 position: absolute;

@@ -225,6 +225,17 @@ h1 {
     background: #dbdbdb;
   }
 }
+@keyframes icone {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: #9356DC;
+  }
+  100% {
+    color: #000;
+  }
+}
 .fonctionnement ul {
   list-style: none;
   counter-reset: listCounter;
@@ -248,10 +259,19 @@ h1 {
   animation-iteration-count: 1, infinite;
   animation-timing-function: ease-in-out;
 }
+.fonctionnement ul li i {
+  animation: icone 4s both 3s infinite ease-in-out;
+}
 .fonctionnement ul li.n2 {
   animation-delay: 1000ms;
 }
+.fonctionnement ul li.n2 i {
+  animation-delay: 1000ms;
+}
 .fonctionnement ul li.n3 {
+  animation-delay: 2000ms;
+}
+.fonctionnement ul li.n3 i {
   animation-delay: 2000ms;
 }
 .fonctionnement ul li ::before {
