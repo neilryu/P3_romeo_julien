@@ -318,7 +318,7 @@ h1{
             font-weight: 600;
             animation-name: show, fond;
             animation-duration: 1000ms,4s;
-            animation-delay: 0ms, 3s;
+            animation-delay: 4s, 3s;
             animation-fill-mode: both;
             animation-iteration-count: 1,infinite;
             animation-timing-function: ease-in-out;
@@ -326,15 +326,15 @@ h1{
                 animation:icone 4s both 3s infinite ease-in-out;
             }
             &.n2{
-                animation-delay: 1000ms;
+                animation-delay: 5s;
                 i{
-                    animation-delay: 1000ms;
+                    animation-delay: 5s;
                 }
             } 
             &.n3{
-                animation-delay: 2000ms;
+                animation-delay: 6s;
                 i{
-                    animation-delay: 2000ms;
+                    animation-delay: 6s;
                 }
             }
             ::before{

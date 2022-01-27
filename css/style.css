@@ -324,7 +324,7 @@ h1 {
   font-weight: 600;
   animation-name: show, fond;
   animation-duration: 1000ms, 4s;
-  animation-delay: 0ms, 3s;
+  animation-delay: 4s, 3s;
   animation-fill-mode: both;
   animation-iteration-count: 1, infinite;
   animation-timing-function: ease-in-out;
@@ -333,16 +333,16 @@ h1 {
   animation: icone 4s both 3s infinite ease-in-out;
 }
 .fonctionnement ul li.n2 {
-  animation-delay: 1000ms;
+  animation-delay: 5s;
 }
 .fonctionnement ul li.n2 i {
-  animation-delay: 1000ms;
+  animation-delay: 5s;
 }
 .fonctionnement ul li.n3 {
-  animation-delay: 2000ms;
+  animation-delay: 6s;
 }
 .fonctionnement ul li.n3 i {
-  animation-delay: 2000ms;
+  animation-delay: 6s;
 }
 .fonctionnement ul li ::before {
   position: absolute;
