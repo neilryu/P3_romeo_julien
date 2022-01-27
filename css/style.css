@@ -16,10 +16,10 @@ header {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  margin: 0% 0% 55% 0%;
 }
 header .logo {
   width: 50%;
+  margin: 0% 0% 2%;
 }
 header nav {
   position: absolute;
@@ -40,6 +40,7 @@ header .fa-arrow-left {
 
 .carte {
   background: #dfdfdf;
+  margin: 59% 0% 0%;
   border-radius: 8% 8% 0% 0%/3% 3% 0% 0%;
   padding: 3%;
   overflow: hidden;
@@ -47,6 +48,7 @@ header .fa-arrow-left {
 
 h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 27px;
 }
 
 .titre::after {
@@ -57,6 +59,9 @@ h1 {
   width: 40px;
 }
 
+.enseigne, .menu {
+  position: relative;
+}
 .enseigne p, .menu p {
   color: #000;
 }
@@ -65,7 +70,7 @@ h1 {
   background: none;
   font-size: 30px;
   position: absolute;
-  top: 23%;
+  top: 0%;
   right: 13%;
 }
 .enseigne button i, .menu button i {
@@ -100,9 +105,9 @@ h1 {
   background: #FFF;
   position: relative;
   margin: 3% 0%;
-  border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
+  border-radius: 2% 2% 2% 2%/15% 15% 15% 15%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  height: 47px;
+  height: 50px;
   overflow: hidden;
   animation: show 1000ms ease-in-out both;
   box-sizing: border-box;
@@ -112,16 +117,17 @@ h1 {
   text-overflow: ellipsis;
   overflow: hidden;
   width: calc(100% - 50px);
+  padding: 0% 0% 0% 2%;
 }
 .case p {
   margin: 1% 0%;
 }
 .case .intituler {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
 }
 .case .ingrédiant {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 .case .prix {
@@ -172,18 +178,20 @@ h1 {
   border: none;
   display: block;
   margin: 13% auto;
-  padding: 0% 12%;
   border-radius: 12%/50%;
+  width: 70%;
+  height: 46px;
   background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
 }
 .commander p {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 900;
   color: #fff;
-  margin: 14% 0%;
+  margin: 0%;
 }
 .commander:hover {
   background: linear-gradient(174deg, #fface8, #ae80e5 100%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* accueil uniquement*/
@@ -264,11 +272,11 @@ h1 {
 .carte_interactive .Réservez {
   font-weight: 600;
   font-size: 30px;
-  margin: 5% 14% 2%;
+  margin: 5% 9% 2%;
 }
 .carte_interactive p {
-  margin: 0% 2%;
-  font-size: 20px;
+  margin: 0% 1%;
+  font-size: 18px;
 }
 .carte_interactive .commander {
   padding: 4% 7%;
@@ -341,9 +349,6 @@ h1 {
   font-size: 24px;
 }
 
-.menu {
-  position: relative;
-}
 .menu .favori {
   background: #FFF;
   padding: 0% 0% 2% 0%;

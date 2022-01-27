@@ -16,9 +16,9 @@ header{
     display: flex;
     flex-flow: row;
     justify-content: center;
-    margin: 0% 0% 55% 0%;
     .logo{
         width: 50%;
+        margin: 0% 0% 2%;
     }
     nav{
         position: absolute;
@@ -38,12 +38,14 @@ header{
 }
 .carte{
     background: #dfdfdf;
+    margin: 59% 0% 0%;
     border-radius:8% 8% 0% 0%/3% 3% 0% 0%;
     padding: 3%;
     overflow: hidden;
 }
 h1{
     font-family: 'Shrikhand', cursive;
+    font-size: 27px;
 }
 .titre::after{
     content: '';
@@ -53,6 +55,7 @@ h1{
     width: 40px;
 }
 .enseigne,.menu{
+    position: relative;
     p{
        color: #000; 
     }
@@ -61,7 +64,7 @@ h1{
         background: none;
         font-size: 30px;
         position: absolute;
-        top: 23%; right: 13%;
+        top: 0%; right: 13%;
         i{
             position: absolute;
             transition: 500ms ease-in-out;
@@ -97,9 +100,9 @@ h1{
     background: $Back;
     position: relative;
     margin: 3% 0%;
-    border-radius: 4% 4% 4% 4%/15% 15% 15% 15%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    height: 47px;
+    border-radius: 2% 2% 2% 2%/15% 15% 15% 15%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    height: 50px;
     overflow:hidden;
     animation: show 1000ms ease-in-out both;
     box-sizing: border-box;
@@ -108,16 +111,17 @@ h1{
         text-overflow: ellipsis;
         overflow: hidden;
         width: calc(100% - 50px);
+        padding: 0% 0% 0% 2%;
     }
     p{
         margin: 1% 0%;
     }
     .intituler{
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 600;
     }
     .ingrédiant{
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
     }
     .prix{
@@ -170,17 +174,19 @@ h1{
     border: none;
     display: block;
     margin: 13% auto;
-    padding: 0% 12%;
     border-radius: 12% / 50%;
+    width: 70%;
+    height: 46px;
     background: linear-gradient(174deg, $Secondaire, $Primaire 100%);
     p{
-        font-size: 20px;
+        font-size: 26px;
         font-weight: 900;
         color: #fff;
-        margin: 14% 0%;
+        margin: 0%;
     }
     &:hover{
         background: linear-gradient(174deg,lighten($Secondaire,10%), lighten($Primaire,10%) 100%);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 }
 /* accueil uniquement*/
@@ -258,11 +264,11 @@ h1{
     .Réservez{
         font-weight: 600;
         font-size: 30px;
-        margin: 5% 14% 2%;
+        margin: 5% 9% 2%;
     }
     p{
-        margin:  0% 2%;
-        font-size: 20px;
+        margin: 0% 1%;
+        font-size: 18px;
     }
     .commander{
         padding: 4% 7%;
@@ -335,7 +341,6 @@ h1{
     }
 }
 .menu{
-    position: relative;
     .favori{
         background: #FFF;
         padding: 0% 0% 2% 0%;
