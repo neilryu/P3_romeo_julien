@@ -333,13 +333,13 @@ h1 {
   animation: icone 4s both 3s infinite ease-in-out;
 }
 .fonctionnement ul li.n2 {
-  animation-delay: 5000ms;
+  animation-delay: 1000ms;
 }
 .fonctionnement ul li.n2 i {
   animation-delay: 1000ms;
 }
 .fonctionnement ul li.n3 {
-  animation-delay: 6000ms;
+  animation-delay: 2000ms;
 }
 .fonctionnement ul li.n3 i {
   animation-delay: 2000ms;
