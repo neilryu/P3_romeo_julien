@@ -178,14 +178,14 @@ h1 {
   border: none;
   display: block;
   margin: 13% auto;
-  border-radius: 12%/50%;
+  border-radius: 9%/50%;
   width: 70%;
   height: 46px;
   background: linear-gradient(174deg, #FF79DA, #9356DC 100%);
 }
 .commander p {
-  font-size: 26px;
-  font-weight: 900;
+  font-size: 24px;
+  font-weight: 400;
   color: #fff;
   margin: 0%;
 }
@@ -197,7 +197,7 @@ h1 {
 /* accueil uniquement*/
 @keyframes disparait {
   0% {
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
   }
   100% {
@@ -402,6 +402,20 @@ h1 {
   font-size: 14px;
   margin: 1% 0% 2% 2%;
 }
+.menu .favori .nouveau {
+  background: #99E2D0;
+  color: #278870;
+  width: 25%;
+  height: 10%;
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  right: 4%;
+  z-index: 1;
+}
 .menu .accueil {
   top: 83%;
 }
@@ -429,6 +443,340 @@ footer .fa-utensils {
 }
 footer .fa-handshake {
   transform: rotate(321deg);
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  header nav {
+    font-size: 43px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .titre {
+    font-size: 32px;
+  }
+  .titre::after {
+    height: 5px;
+    width: 82px;
+  }
+
+  .changement p {
+    font-size: 100px;
+    left: 27%;
+  }
+  .changement span {
+    width: 300px;
+    height: 300px;
+    top: 8%;
+    left: 28%;
+  }
+
+  .carte_interactive p {
+    font-size: 42px;
+  }
+  .carte_interactive .localisation {
+    font-size: 26px;
+  }
+  .carte_interactive .Réservez {
+    font-size: 52px;
+  }
+  .carte_interactive .commander {
+    font-size: 37px;
+    width: 70%;
+  }
+
+  .commander {
+    height: 96px;
+    width: 60%;
+    border-radius: 10%/50%;
+  }
+  .commander p {
+    font-size: 40px;
+  }
+
+  .restaurants h1, .restaurants h2, .fonctionnement h1, .fonctionnement h2 {
+    font-size: 50px;
+  }
+
+  .fonctionnement ul li {
+    font-size: 30px;
+  }
+  .fonctionnement ul li ::after {
+    width: 8%;
+    height: 48%;
+    right: 96%;
+    bottom: 24%;
+    font-size: 100%;
+  }
+
+  .menu .favori img {
+    object-fit: cover;
+    height: 340px;
+  }
+  .menu .favori .noms, .menu .favori .lieu {
+    font-size: 26px;
+  }
+  .menu .favori .nouveau {
+    font-size: 23px;
+  }
+  .menu .accueil {
+    top: 80%;
+    font-size: 50px;
+  }
+
+  footer p {
+    font-size: 26px;
+  }
+  footer a {
+    font-size: 22px;
+  }
+
+  .enseigne button, .menu button {
+    font-size: 55px;
+  }
+
+  .case {
+    height: 68px;
+  }
+  .case .intituler {
+    font-size: 22px;
+  }
+  .case .ingrédiant {
+    font-size: 19px;
+  }
+  .case .prix {
+    font-size: 23px;
+  }
+  .case .valid {
+    bottom: 40px;
+    left: 15px;
+  }
+  .case:active .valid {
+    transform: scale(2.5);
+  }
+}
+@media (min-width: 769px) and (max-width: 1439px) {
+  header nav {
+    font-size: 50px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .titre {
+    font-size: 40px;
+  }
+  .titre::after {
+    height: 5px;
+    width: 102px;
+  }
+
+  .changement p {
+    font-size: 210px;
+    left: 3%;
+    margin: 0%;
+  }
+  .changement span {
+    width: 700px;
+    height: 700px;
+    left: 0%;
+  }
+
+  .carte_interactive p {
+    font-size: 42px;
+  }
+  .carte_interactive .localisation {
+    font-size: 47px;
+  }
+  .carte_interactive .Réservez {
+    font-size: 64px;
+  }
+  .carte_interactive .commander {
+    font-size: 40px;
+    width: 56%;
+    padding: inherit;
+  }
+
+  .commander {
+    height: 80px;
+    width: 55%;
+    border-radius: 10%/50%;
+  }
+  .commander p {
+    font-size: 40px;
+  }
+
+  .restaurants h1, .restaurants h2, .fonctionnement h1, .fonctionnement h2 {
+    font-size: 50px;
+  }
+
+  .fonctionnement ul li {
+    font-size: 45px;
+  }
+
+  .menu .favori img {
+    height: 450px;
+  }
+  .menu .favori .noms, .menu .favori .lieu {
+    font-size: 35px;
+  }
+  .menu .favori .nouveau {
+    font-size: 35px;
+  }
+  .menu .accueil {
+    top: 82%;
+    font-size: 50px;
+  }
+
+  footer p {
+    font-size: 40px;
+  }
+  footer a {
+    font-size: 30px;
+  }
+
+  .enseigne button, .menu button {
+    font-size: 50px;
+    top: 8%;
+  }
+
+  .case {
+    height: 106px;
+  }
+  .case .intituler {
+    font-size: 40px;
+  }
+  .case .ingrédiant {
+    font-size: 33px;
+  }
+  .case .prix {
+    font-size: 35px;
+  }
+  .case .valid {
+    bottom: 40px;
+    left: 15px;
+  }
+  .case .fas {
+    left: 25%;
+    top: 56%;
+  }
+  .case:active .valid {
+    transform: scale(3);
+  }
+}
+@media (min-width: 1440px) {
+  header nav {
+    font-size: 90px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .titre {
+    font-size: 70px;
+  }
+  .titre::after {
+    height: 10px;
+    width: 180px;
+  }
+
+  .changement p {
+    font-size: 220px;
+    left: 25%;
+  }
+  .changement span {
+    width: 1000px;
+    height: 1000px;
+    top: 9%;
+    left: 17%;
+  }
+
+  .carte_interactive p {
+    font-size: 70px;
+  }
+  .carte_interactive .localisation {
+    font-size: 47px;
+  }
+  .carte_interactive .Réservez {
+    font-size: 100px;
+  }
+  .carte_interactive .commander {
+    font-size: 67px;
+    width: 63%;
+    padding: inherit;
+  }
+
+  .commander {
+    height: 164px;
+    width: 55%;
+    border-radius: 10%/50%;
+  }
+  .commander p {
+    font-size: 70px;
+  }
+
+  .restaurants h1, .restaurants h2, .fonctionnement h1, .fonctionnement h2 {
+    font-size: 90px;
+  }
+
+  .fonctionnement ul li {
+    font-size: 70px;
+  }
+
+  .menu .favori img {
+    height: 510px;
+  }
+  .menu .favori .noms, .menu .favori .lieu {
+    font-size: 60px;
+  }
+  .menu .favori .nouveau {
+    font-size: 45px;
+  }
+  .menu .accueil {
+    top: 77%;
+    font-size: 100px;
+  }
+
+  footer p {
+    font-size: 50px;
+  }
+  footer a {
+    font-size: 40px;
+  }
+
+  .enseigne button, .menu button {
+    font-size: 80px;
+    top: 20%;
+  }
+
+  .case {
+    height: 150px;
+  }
+  .case .intituler {
+    font-size: 50px;
+  }
+  .case .ingrédiant {
+    font-size: 45px;
+  }
+  .case .prix {
+    font-size: 45px;
+  }
+  .case .valid {
+    bottom: 40px;
+    left: 15px;
+  }
+  .case .fas {
+    left: 25%;
+    top: 48%;
+  }
+  .case:active .valid {
+    transform: scale(4.5);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
