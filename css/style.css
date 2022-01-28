@@ -688,11 +688,12 @@ footer .fa-handshake {
   .changement p {
     font-size: 220px;
     left: 25%;
+    margin: 0%;
   }
   .changement span {
     width: 1000px;
     height: 1000px;
-    top: 9%;
+    top: 3%;
     left: 17%;
   }
 
