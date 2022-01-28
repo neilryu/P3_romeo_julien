@@ -374,6 +374,7 @@ h1{
     }
 }
 .menu{
+    position: relative;
     .favori{
         background: #FFF;
         padding: 0% 0% 2% 0%;
@@ -608,7 +609,7 @@ footer{
     }
     .commander {
         height: 80px;
-        width: 55%;
+        width: 40%;
         border-radius: 10%/50%;
         p{
             font-size: 40px;

@@ -380,6 +380,9 @@ h1 {
   font-size: 24px;
 }
 
+.menu {
+  position: relative;
+}
 .menu .favori {
   background: #FFF;
   padding: 0% 0% 2% 0%;
@@ -603,7 +606,7 @@ footer .fa-handshake {
 
   .commander {
     height: 80px;
-    width: 55%;
+    width: 40%;
     border-radius: 10%/50%;
   }
   .commander p {
