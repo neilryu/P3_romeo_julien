@@ -19,7 +19,7 @@ header {
 }
 header .logo {
   width: 50%;
-  margin: 0% 0% 2%;
+  margin: 0% 0% 5%;
 }
 header nav {
   position: absolute;
@@ -40,7 +40,7 @@ header .fa-arrow-left {
 
 .carte {
   background: #dfdfdf;
-  margin: 59% 0% 0%;
+  margin: 56% 0% 0%;
   border-radius: 8% 8% 0% 0%/3% 3% 0% 0%;
   padding: 3%;
   overflow: hidden;
@@ -139,18 +139,15 @@ h1 {
 .case .valid {
   visibility: hidden;
   position: relative;
-  font-size: 13px;
-  bottom: 15px;
-  left: 12px;
+  font-size: 25px;
   background: #99E2D0;
-  padding-block: 8%;
   transition: all 200ms;
 }
 .case .fas {
   color: #FFF;
   position: absolute;
-  left: 16%;
-  top: 20%;
+  left: 21%;
+  top: 22%;
   transform: rotate(95deg);
 }
 .case.n2 {
@@ -552,12 +549,13 @@ footer .fa-handshake {
   .case .prix {
     font-size: 23px;
   }
-  .case .valid {
-    padding-inline: 5%;
-  }
   .case .fas {
     left: 27%;
     top: 25%;
+  }
+  .case:active .valid {
+    padding-inline: 5%;
+    font-size: 30px;
   }
 }
 @media (min-width: 769px) and (max-width: 1439px) {
@@ -669,16 +667,15 @@ footer .fa-handshake {
   .case .prix {
     font-size: 35px;
   }
-  .case .valid {
-    bottom: 40px;
-    left: 15px;
-  }
   .case .fas {
-    left: 8px;
-    top: 77px;
+    left: 25%;
+    top: 25%;
+  }
+  .case .valid {
+    font-size: 45px;
   }
   .case:active .valid {
-    transform: scale(3);
+    padding-inline: 5%;
   }
 }
 @media (min-width: 1440px) {
@@ -791,16 +788,13 @@ footer .fa-handshake {
   .case .prix {
     font-size: 45px;
   }
-  .case .valid {
-    bottom: 40px;
-    left: 15px;
-  }
   .case .fas {
-    left: 8px;
-    top: 103px;
+    left: 26%;
+    top: 26%;
+    font-size: 65px;
   }
   .case:active .valid {
-    transform: scale(4.5);
+    padding-inline: 5%;
   }
 }
 

@@ -18,7 +18,7 @@ header{
     justify-content: center;
     .logo{
         width: 50%;
-        margin: 0% 0% 2%;
+        margin: 0% 0% 5%;
     }
     nav{
         position: absolute;
@@ -38,7 +38,7 @@ header{
 }
 .carte{
     background: #dfdfdf;
-    margin: 59% 0% 0%;
+    margin: 56% 0% 0%;
     border-radius:8% 8% 0% 0%/3% 3% 0% 0%;
     padding: 3%;
     overflow: hidden;
@@ -133,18 +133,15 @@ h1{
     .valid{
         visibility: hidden;
         position: relative;
-        font-size: 13px;
-        bottom: 15px;
-        left: 12px;
+        font-size: 25px;
         background: $Tertiaire;
-        padding-block: 8%;
         transition: all 200ms;
     }
     .fas{
         color: #FFF;
         position: absolute;
-        left: 16%;
-        top: 20%;
+        left: 21%;
+        top: 22%;
         transform: rotate(95deg);
     }
     &.n2{
@@ -551,12 +548,15 @@ footer{
         .prix{
             font-size: 23px;
         }
-        .valid{
-            padding-inline: 5%;
-        }
         .fas{
             left: 27%;
             top: 25%;
+        }
+        &:active{
+            .valid{
+            padding-inline: 5%;
+            font-size: 30px;
+            }
         }
     }
 }
@@ -674,17 +674,16 @@ footer{
         .prix{
             font-size: 35px;
         }
-        .valid{
-            bottom: 40px;
-            left: 15px;
-        }
         .fas{
-            left: 8px;
-            top: 77px;
+            left:25%;
+            top:25%;
+        }
+        .valid{
+            font-size: 45px;
         }
         &:active{
             .valid{
-                transform: scale(3);
+                padding-inline: 5%;
             }
         }
     }
@@ -804,17 +803,14 @@ footer{
         .prix{
             font-size: 45px;
         }
-        .valid{
-            bottom: 40px;
-            left: 15px;
-        }
         .fas{
-            left: 8px;
-            top: 103px;
+            left: 26%;
+            top: 26%;
+            font-size: 65px;
         }
         &:active{
             .valid{
-                transform: scale(4.5);
+                padding-inline: 5%;
             }
         }
     }
