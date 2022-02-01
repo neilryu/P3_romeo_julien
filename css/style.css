@@ -114,7 +114,6 @@ h1 {
 }
 .case .choix {
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: calc(100% - 50px);
   padding: 0% 0% 0% 2%;
@@ -125,14 +124,18 @@ h1 {
 .case .intituler {
   font-size: 18px;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .case .ingrédiant {
   font-size: 15px;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .case .prix {
   font-weight: 600;
-  padding: 0% 4%;
+  padding: 0% 2%;
   display: flex;
   align-items: flex-end;
 }
@@ -305,7 +308,7 @@ h1 {
 .fonctionnement ul {
   list-style: none;
   counter-reset: listCounter;
-  padding: 0%;
+  padding: 1%;
 }
 .fonctionnement ul li {
   position: relative;
