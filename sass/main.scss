@@ -8,6 +8,7 @@ body, button{
 }
 body{
     position: relative;
+    margin: 0%;
 }
 a{
     text-decoration: none;
@@ -208,17 +209,19 @@ h1{
     }
 }
 .changement{
-    background: #dbdbdb;
+    background: #FFF;
     position: absolute;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     animation: disparait 800ms ease-in-out 3s both;
     p{
         color: $Secondaire;
         position: absolute;
         font-size: 60px;
         top: 2%;
-        left: 20%;
     }
     span{
         width: 172px;
@@ -226,7 +229,6 @@ h1{
         display: flex;
         position: relative;
         top: 7%;
-        left: 25%;
         color: transparent;
     }
     span::before{
@@ -458,13 +460,11 @@ footer{
     .changement{
         p{
             font-size: 100px;
-            left: 27%;
         }
         span{
             width: 300px;
             height: 300px;
             top: 8%;
-            left: 28%;
         }
     }
     .carte_interactive{
@@ -582,13 +582,11 @@ footer{
     .changement{
         p{
             font-size: 210px;
-            left: 3%;
             margin: 0%;
         }
         span{
             width: 700px;
             height: 700px;
-            left: 0%;
         }
     }
     .carte_interactive{
@@ -692,6 +690,10 @@ footer{
     }
 }
 @media (min-width:1440px){
+    body{
+        max-width: 1500px;
+        margin: auto;
+    }
     header{
         nav{
             font-size: 90px;
@@ -710,14 +712,12 @@ footer{
     .changement{
         p{
             font-size: 220px;
-            left: 25%;
             margin: 0%;
         }
         span{
             width: 1000px;
             height: 1000px;
             top: 3%;
-            left: 17%;
         }
     }
     .carte_interactive{
