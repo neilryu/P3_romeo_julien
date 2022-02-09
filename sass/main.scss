@@ -272,7 +272,6 @@ h1{
         font-size: 18px;
     }
     .commander{
-        padding: 4% 7%;
         font-size: 18px;
         color: #FFF;
     }
@@ -635,18 +634,19 @@ footer{
         margin: 0% 2%;
         .favori{
             img{
-                height: 450px;
+                height: 300px;
             }
             .noms,.lieu{
-                font-size: 35px;  
+                font-size: 30px;  
             }
             .nouveau{
-                font-size: 35px;
-                width: 34%;
+                font-size: 30px;
+                width: 40%;
             }
         }
         .accueil{
-            top: 82%;
+            top: 80%;
+            right: 16%;
             font-size: 50px;
         }
     }
